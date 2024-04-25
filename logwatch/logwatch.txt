@@ -1,0 +1,1 @@
+logwatch --detail Med --mailto root --service sshd --service sshd2 --service ftpd-messages --service ftpd-xferlog --range today
