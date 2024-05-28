@@ -1,0 +1,23 @@
+version: '3.0'
+services:
+    db:
+        image: 'db/ilyukhin'
+        container_name: db
+        command: '--init-file /data/application/init.sql'
+        environment:
+            MYSQL_ROOT_PASSWORD: 123456
+        volumes: 
+            - './Database/dbfile:/var/lib/mysql'
+            - './Database/init.sql:/data/application/init.sql'
+        ports:
+            - '3308:3306'
+        restart: always
+    server:
+        image: 'server/ilyukhin'
+        container_name: server
+        ports: 
+            - '8888:80'
+        volumes:
+            - './Server/src:/var/www/html'
+        depends_on:
+            - db

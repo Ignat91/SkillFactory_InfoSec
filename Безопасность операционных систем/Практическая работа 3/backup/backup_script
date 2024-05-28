@@ -1,0 +1,9 @@
+#!/bin/bash
+
+backup_files="/home /var/log /etc/vsftpd.conf /etc/ssh/sshd_config /etc/ssh/ssh>
+directory="/tmp"
+
+sudo tar cpf $directory/backup-`date '+%d-%B-%Y'`.tar $backup_files
+
+ls -lh $directory
+

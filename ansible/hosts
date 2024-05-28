@@ -1,5 +1,0 @@
-[example_devices]
-192.168.0.103 ansible_ssh_user=ubuntu ansible_sudo_pass=2991
-
-[IlyukhinIA]
-192.168.0.103 ansible_ssh_user=ubuntu ansible_sudo_pass=2991
